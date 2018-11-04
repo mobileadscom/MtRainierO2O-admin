@@ -2,6 +2,7 @@
 	<div>
 		<div class="data-info shadow-1" :class="{white:white}">
 			<div class="data-info-property">User Id: {{data.id}}</div>
+			<div class="data-info-property">{{translateWord('accountType')}}: {{data.type}}</div>
 			<div class="data-info-property">{{translateWord('registeredOn')}}: {{data.formattedDate}}</div>
 			<div class="data-info-property" v-if="data.isTwitterId">{{translateWord('twitterName')}}: {{data.twitterName}}</div>
 			<div class="data-info-property" :class="{reissued: data.reissued}">{{translateWord('couponCode')}}: <span v-html="data.couponLink"></span></div>
@@ -24,6 +25,10 @@
 			return {
 				processedData: {},
 				wording: {
+					'accountType': {
+						'en': 'Account Type',
+						'ja': 'Account Type'
+					},
 					'registeredOn': {
 						'en': 'Registered On',
 						'ja': '登録日時'
@@ -39,6 +44,14 @@
 			        'state': {
 						'en': 'State',
 						'ja': '状態'
+			        },
+			        'win': {
+			          'en': 'win',
+			          'ja': '当選'
+			        },
+			        'lose': {
+			          'en': 'lose',
+			          'ja': '落選者'
 			        },
 			        'reissueCoupon': {
 						'en': 'Reissue Coupon',

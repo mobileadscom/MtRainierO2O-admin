@@ -463,7 +463,7 @@ export default {
       }
     },
     generateCouponLink(userId, source) {
-      return 'https://s3.amazonaws.com/rmarepo/o2o/MtRainier/coupon.html?userId=' + userId + '&source=MtRainier';
+      return 'https://couponcampaign.ienomistyle.com/MtRainier/coupon.html?userId=' + userId + '&source=MtRainier';
     },
     reissueCoupon(data) {
       data.reissuing = true;
